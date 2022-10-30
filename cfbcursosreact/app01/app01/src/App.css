@@ -1,0 +1,24 @@
+.caixa{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.caixa a{
+text-decoration: none;
+color: brown;    
+}
+
+.caixa a:hover{
+background-color: #f00;
+color: #fff;
+}
+
+
+
+.texto{
+ color: blueviolet;
+ font-size: 1em; 
+ }
