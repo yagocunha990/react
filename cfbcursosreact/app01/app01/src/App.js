@@ -1,27 +1,24 @@
-import React,{useState} from 'react';
-import Led from './componentes/led'
+import React from 'react';
+
 
 
  
 export default function App(){
 
-const [ligado,setLigado]=useState(false)
-
-const cancelar=(obj)=>{
-  return obj.preventDefault()
-}
+  const carros=[
+    
+   {categoria: "Esporte", preco:"11000000.00", modelo: "Golf GTI"} 
+  ];
+  const listaCarros=carros.map(
+    (c,i)=> 
+    <li key={i}>{i} - {c.categoria} {c.modelo} - R${c.preco} </li>
+    
+  )
 
   return(
     <>
-   
-      <Led ligado={ligado} setLigado={setLigado} />
-
-      <a href='https://youtube.com/cfbcursos'
-        target='_blank'
-        onClick={(e)=>cancelar(e)}
-      >
-        CFB CURSOS  
-      </a>   
+        <ul>{listaCarros}</ul>
+         
       
       </>
   );
